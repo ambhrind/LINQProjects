@@ -13,13 +13,18 @@ namespace LINQProjects
     {
         private int a, b, c, d;
 
-        public MyCustomCollection(int a1, int b1, int c1, int d1)
+        public MyCustomCollection(int a, int b, int c, int d)
         {
-            a = a1;
-            b = b1;
-            c = c1;
-            d = d1;
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.c = d;
         }
+
+        /// <summary>
+        /// yield return for enumerating class as a collection
+        /// </summary>
+        /// <returns></returns>
         public IEnumerator<int> GetEnumerator()
         {
             yield return a;
@@ -28,6 +33,10 @@ namespace LINQProjects
             yield return d;
         }
 
+        /// <summary>
+        /// non generic implementation
+        /// </summary>
+        /// <returns></returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
