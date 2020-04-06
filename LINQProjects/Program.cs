@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LINQProjects
 {
@@ -17,6 +18,12 @@ namespace LINQProjects
             foreach (string name in n.Names)
             {
                 Console.WriteLine(name);
+            }
+            
+
+            foreach(int c in Enumerable.Range(1, 10))
+            {
+                Console.WriteLine(c);
             }
         }
     }
